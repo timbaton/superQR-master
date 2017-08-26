@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SuperEgo QR</string>
+    <string name="ticket_info">Данные билета</string>
+    <string name="error_unexpected">Похоже, что на коде - не наш билет</string>
+    <string name="error_not_found">Билет не найден или уже был использован</string>
+    <string name="error_key">Неверный ключ продукта</string>
+    <string name="button_send">ОПРАВИТЬ</string>
+    <string name="button_back">НАЗАД</string>
+    <string name="info_time">Время покупки</string>
+    <string name="info_phone">Телефон</string>
+    <string name="info_mail">Email</string>
+    <string name="info_name">Имя</string>
+    <string name="answ_not_found">Билет не найден</string>
+    <string name="request_camera_perm">Для считывания кода необходима камера</string>
+    <string name="new_attaemp_camera_perm">Разрешение на камеру не было получено. Повторяем попытку</string>
+    <string name="access_granted">Разрешение получено</string>
+    <string name="access_denied_stop_working">Разрешение не получено, программа не сможет функционировать</string>
+    <string name="camera_access">Доступ к камере</string>
+    <string name="false_ticket">Данные билета не совпадают с данными сервера, требуется ручная проверка</string>
+    <string name="good">Готово</string>
+    <string name="ticket_success">Билет отмечен</string>
+    <string name="ticket_error">Ошибка</string>
+    <string name="ticket_question">Ручная проверка</string>
+    <string name="error_conneection">Нет подключения к интернету</string>
+
+</resources>
