@@ -10,6 +10,10 @@
     <string name="info_phone">Телефон</string>
     <string name="info_mail">Email</string>
     <string name="info_name">Имя</string>
+    <string name="info_zone">Зона</string>
+    <string name="info_sector">Сектор</string>
+    <string name="info_row">Ряд</string>
+    <string name="info_place">Место</string>
     <string name="answ_not_found">Билет не найден</string>
     <string name="request_camera_perm">Для считывания кода необходима камера</string>
     <string name="new_attaemp_camera_perm">Разрешение на камеру не было получено. Повторяем попытку</string>

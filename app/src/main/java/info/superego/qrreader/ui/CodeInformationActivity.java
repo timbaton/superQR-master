@@ -25,6 +25,10 @@ public class CodeInformationActivity extends AppCompatActivity {
     private TextView mPhoneText;
     private TextView mNameText;
     private TextView mDateText;
+    private TextView mPlaceText;
+    private TextView mRowText;
+    private TextView mZoneText;
+    private TextView mSector;
     public NetworkService mNetworkService;
     private String hash;
     public String[] text;
@@ -43,6 +47,10 @@ public class CodeInformationActivity extends AppCompatActivity {
         mPhoneText = (TextView) findViewById(R.id.phone_info);
         mNameText = (TextView) findViewById(R.id.name_info);
         mDateText = (TextView) findViewById(R.id.date_info);
+        mPlaceText = (TextView) findViewById(R.id.place_info);
+        mRowText = (TextView) findViewById(R.id.row_info);
+        mSector = (TextView) findViewById(R.id.sector_info);
+        mZoneText = (TextView) findViewById(R.id.zone_info);
 
         mProgressDialog = new ProgressDialog(this);
 
@@ -60,7 +68,7 @@ public class CodeInformationActivity extends AppCompatActivity {
 
     private void setTextForViews(String stringExtra) {
         text = stringExtra.split(";");
-        if (text.length != 5) {
+        if (text.length != 9) {
             // incorrect qr code
             final Intent intent = new Intent(this, ResultActivity.class);
             intent.putExtra("code", "3");
@@ -71,8 +79,12 @@ public class CodeInformationActivity extends AppCompatActivity {
         mEmailText.setText(text[0]);
         mNameText.setText(text[1]);
         mPhoneText.setText(text[2]);
-        mDateText.setText(text[3]);
-        hash = text[4];
+        mZoneText.setText(text[3]);
+        mSector.setText(text[4]);
+        mRowText.setText(text[5]);
+        mPlaceText.setText(text[6]);
+        mDateText.setText(text[7]);
+        hash = text[8];
     }
 
 
@@ -107,6 +119,7 @@ public class CodeInformationActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Model> call, Throwable t) {
+                mProgressDialog.hide();
                 Toast.makeText(CodeInformationActivity.this, R.string.error_conneection,
                         Toast.LENGTH_LONG).show();
             }
